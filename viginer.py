@@ -43,10 +43,3 @@ def decrypt_vigenere(ciphertext: str, keyword: str) -> str:
             ciphertext[i], 97 - ord(keyword[i % len(keyword)])
         )
     return plaintext
-
-
-def main():
-    print(decrypt_vigenere("LXFOPVEFRNHR", "LEMON"))
-
-
-main()
