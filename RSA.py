@@ -42,7 +42,16 @@ def generate_keypair(p: int, q: int) -> tuple:
 
 
 def gcd(n1: int, n2: int) -> int:
-    return math.gcd(n1, n2)
+    if n1 <= 0 or n2 <= 0:
+        return 0
+    if n1 == n2:
+        return n1
+    if n1 > n2:
+        return gcd(n1 - n2, n2)
+    return gcd(n1, n2 - n1)
+
+
+print(gcd(10, 25))
 
 
 def Euclid(a, b):
@@ -68,4 +77,3 @@ def multiplicative_inverse(e: int, phi: int) -> int:
         y1 = y0
         x1 = x0
     return y0 % phi
-
