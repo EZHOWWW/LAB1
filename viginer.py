@@ -1,4 +1,4 @@
-def get_displace_char(char: str, key: int = 3) -> str:
+def get_displace_char(char: str, key: int) -> str:
     """ord(A) = 65, ord(Z) = 90
     ord(a) = 97, ord(z)= 122"""
     _ord = ord(char[0])
